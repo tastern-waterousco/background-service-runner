@@ -1,2 +1,2 @@
 
-module.exports = require('./lib/BackgroundRunner');
+module.exports = require('./lib/DaemonRunner');
