@@ -21,7 +21,7 @@ var TestJob = function(options) {
                 clearInterval( id );
                 return;
             }
-        }, 500);
+        }, 1000);
     };
 };
 
