@@ -13,7 +13,9 @@ A daemon runner utility for node and shell script services.
 
     var runner = require('background-service-runner').createDaemonRunner(),
         command = __dirname + '/Job.js',
-        pid = runner.start( command );
+        child = runner.start( command );
+        
+    console.log('pid: ', child.pid);
 
 ## Examples
 
