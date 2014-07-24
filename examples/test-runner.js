@@ -2,7 +2,7 @@
 
 var runner = require('../lib/DaemonRunner').createDaemonRunner(),
     command = __dirname + '/TestJob.js',
-    child = runner.start( command, [ 'foo', 'bar' ]);
+    child = runner.start( command, [ 'foo', 'bar' ] );
 
 setTimeout(function() {
     // console.log( child );

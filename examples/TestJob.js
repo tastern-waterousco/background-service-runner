@@ -29,7 +29,7 @@ var log = require('simple-node-logger').createSimpleFileLogger( __dirname + '/jo
     opts = { log:log },
     job = new TestJob( opts );
 
-log.info('args: ', process.args);
+log.info('args: ', process.argv);
 
 job.start();
 
