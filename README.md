@@ -27,6 +27,8 @@ There is a test runner and executable in the examples directory.  Invoke the tes
 
 ## Tests
 
+Unit tests written in mocha/chai/should and run using grunt.  All code tested with jshint.  
+
 	make test
 	
 	- or -
@@ -36,4 +38,4 @@ There is a test runner and executable in the examples directory.  Invoke the tes
 _Note: works in linux/unix but probably not in windows._
 
 - - -
-<p><small><em>Copyright © 2014, rain city software | Version 0.90.10</em></small></p>
+<p><small><em>Copyright © 2014, rain city software | Version 0.90.12</em></small></p>
