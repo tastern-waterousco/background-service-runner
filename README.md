@@ -1,6 +1,8 @@
 # Background Service Runner
 - - -
 
+A background runner utility for node and shell script services.
+
 ## Overview
 
 ## Installation
