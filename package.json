@@ -11,6 +11,7 @@
     "daemon",
     "background",
     "spawn",
+    "child process",
     "background-services"
   ],
   "dependencies": {
