@@ -16,6 +16,15 @@ describe('DaemonRunner', function() {
         var opts = {};
 
         opts.log = log;
+        opts.spawn = function(cmd, args, opts) {
+            return {
+                command:cmd,
+                args:args,
+                opts:opts,
+                unref:function() { },
+                pid:dash.random(1000, 31000)
+            };
+        };
 
         return opts;
     };
@@ -24,13 +33,18 @@ describe('DaemonRunner', function() {
         var runner = new DaemonRunner( createOptions() ),
             methods = [
                 'start',
-                'stop'
+                'stop',
+                'verifyCommandFile',
+                '__protected'
             ];
 
         it('should be an instance of DaemonRunner', function() {
             should.exist( runner );
 
             runner.should.be.instanceof( DaemonRunner );
+
+            runner.__protected().stdio.length.should.equal( 3 );
+            should.exist( runner.__protected().cwd );
         });
 
         it('should have all known methods by size and type', function() {
@@ -40,5 +54,10 @@ describe('DaemonRunner', function() {
                 runner[ method ].should.be.a('function');
             });
         });
+    });
+
+    describe('start', function() {
+        var runner = new DaemonRunner( createOptions() );
+        it('should start a mock command');
     });
 });
