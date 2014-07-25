@@ -42,7 +42,28 @@ The project exposes two mocks for testing.
 * MockSpawn
 * MockChild
 
+See the existing tests for use, but generally you can use these mocks like this...
+
+	var MockSpawn = require('background-service-runner').mocks.MockSpawn;
+	
+	...
+	
+	var mock = new MockSpawn(),
+		opts = {
+			log:log,
+			spawn:mock.spawn
+		},
+		runner = new DaemonRunner( opts );
+		
+	var child = runner.start( 'mycommand', [ 'foo', 'bar' ] );
+	
+	should.exist( child );
+	child.pid.should.be.above( 1000 );
+	
+	
+
+
 _Note: works in linux/unix but probably not in windows._
 
 - - -
-<p><small><em>Copyright © 2014, rain city software | Version 0.90.13</em></small></p>
+<p><small><em>Copyright © 2014, rain city software | Version 0.90.14</em></small></p>
