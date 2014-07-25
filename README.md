@@ -35,7 +35,14 @@ Unit tests written in mocha/chai/should and run using grunt.  All code tested wi
 	
 	make watch
 	
+## Mocks
+
+The project exposes two mocks for testing.
+
+* MockSpawn
+* MockChild
+
 _Note: works in linux/unix but probably not in windows._
 
 - - -
-<p><small><em>Copyright © 2014, rain city software | Version 0.90.12</em></small></p>
+<p><small><em>Copyright © 2014, rain city software | Version 0.90.13</em></small></p>

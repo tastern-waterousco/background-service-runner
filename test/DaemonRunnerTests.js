@@ -7,24 +7,18 @@
 var should = require('chai').should(),
     dash = require('lodash'),
     log = require('simple-node-logger' ).createSimpleLogger(),
-    DaemonRunner = require('../lib/DaemonRunner');
+    DaemonRunner = require('../lib/DaemonRunner' ),
+    MockSpawn = require('./mocks/MockSpawn');
 
 describe('DaemonRunner', function() {
     'use strict';
+
+    log.setLevel('fatal');
 
     var createOptions = function() {
         var opts = {};
 
         opts.log = log;
-        opts.spawn = function(cmd, args, opts) {
-            return {
-                command:cmd,
-                args:args,
-                opts:opts,
-                unref:function() { },
-                pid:dash.random(1000, 31000)
-            };
-        };
 
         return opts;
     };
@@ -57,7 +51,29 @@ describe('DaemonRunner', function() {
     });
 
     describe('start', function() {
-        var runner = new DaemonRunner( createOptions() );
-        it('should start a mock command');
+        var opts = createOptions(),
+            mock = new MockSpawn();
+
+        opts.spawn = mock.spawn;
+
+        it('should start a mock command', function() {
+            var runner = new DaemonRunner( opts ),
+                cmd = __dirname + '/fixtures/test-script.sh',
+                args = [ 'foo', 'bar' ],
+                child;
+
+            child = runner.start( cmd, args );
+            should.exist( child );
+
+            mock.getCommand().should.equal( cmd );
+            mock.getArgs().should.equal( args );
+
+            should.exist( mock.getSpawnOptions() );
+
+            child.pid.should.be.above( 1000 );
+            child.getReferenced().should.equal( false );
+
+
+        });
     });
 });
