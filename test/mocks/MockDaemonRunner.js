@@ -4,7 +4,7 @@
  * @author: darryl.west@roundpeg.com
  * @created: 7/26/14 8:48 AM
  */
-var DaemonRunner = require( '../lib/DaemonRunner' ),
+var DaemonRunner = require( '../../lib/DaemonRunner' ),
     MockSpawn = require( './MockSpawn' ),
     MockChild = require( './MockChild' );
 
