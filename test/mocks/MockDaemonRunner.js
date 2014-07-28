@@ -40,6 +40,10 @@ MockDaemonRunner.createDaemonRunner = function(opts) {
         }
     };
 
+    runner.stop = function(pid) {
+        
+    };
+
     return runner;
 };
 
