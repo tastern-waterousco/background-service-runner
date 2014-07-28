@@ -20,6 +20,12 @@ The following demonstrates a minimal run script that runs a job as a detached sc
         child = runner.start( command );
         
     console.log('pid: ', child.pid);
+    
+By default the runner detaches from the child so that it may exit after spawning the child.  If you want the runner to exit immediately after spawning the job, then invoke start/stop like this:
+
+	var child = runner.start();
+	console.log( 'child running on pid: ', child.pid );
+	runner.stop();
 
 ## Examples
 
@@ -67,4 +73,4 @@ See the existing tests for use, but generally you can use these mocks like this.
 _Note: works in linux/unix but probably not in windows._
 
 - - -
-<p><small><em>Copyright © 2014, rain city software | Version 0.90.16</em></small></p>
+<p><small><em>Copyright © 2014, rain city software | Version 0.90.17</em></small></p>
