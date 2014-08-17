@@ -1,11 +1,14 @@
 {
   "name": "background-service-runner",
-  "version": "0.90.19",
+  "version": "0.90.20",
   "description": "A daemon runner utility for node, python, shell and other executable services.  Can be configured to run a monitored or detached child process or groups of processes.",
   "main": "./index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/darrylwest/background-service-runner.git"
+  },
+  "scripts":{
+    "test":"grunt test"
   },
   "keywords": [
     "daemon",
