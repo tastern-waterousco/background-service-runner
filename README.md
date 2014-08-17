@@ -2,6 +2,7 @@
 - - -
 
 [![NPM version](https://badge.fury.io/js/background-service-runner.svg)](http://badge.fury.io/js/background-service-runner)
+[![Build Status](https://travis-ci.org/darrylwest/background-service-runner.svg?branch=develop)](https://travis-ci.org/darrylwest/background-service-runner)
 
 A daemon runner utility for node, python, shell and other executable services.  Can be configured to run a monitored or detached child process or groups of processes.
 
