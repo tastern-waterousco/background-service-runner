@@ -71,8 +71,7 @@ See the existing tests for use, but generally you can use these mocks like this.
 	
 	
 
-
-_Note: works in linux/unix but probably not in windows._
+_Note: works in linux/unix but not tested in windows._
 
 - - -
 <p><small><em>Copyright © 2014, rain city software | Version 0.90.20</em></small></p>
