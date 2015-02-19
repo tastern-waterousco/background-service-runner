@@ -1,6 +1,6 @@
 {
   "name": "background-service-runner",
-  "version": "0.90.22",
+  "version": "0.90.23",
   "description": "A daemon runner utility for node, python, shell and other executable services.  Can be configured to run a monitored or detached child process or groups of processes.",
   "main": "./index.js",
   "repository": {
@@ -19,11 +19,10 @@
     "background services"
   ],
   "dependencies": {
-    "lodash": "^3.0.0",
-    "simple-node-logger": "^0.92.15"
+    "lodash": "^3.1.0",
+    "simple-node-logger": "^0.92.16"
   },
   "devDependencies": {
-    "casual": "^1.4.5",
     "chai": "~1.8.1",
     "express-mocks-http": "0.0.11",
     "grunt": "~0.4.2",
