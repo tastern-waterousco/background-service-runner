@@ -76,4 +76,4 @@ See the existing tests for use, but generally you can use these mocks like this.
 _Note: works in linux/unix but not tested in windows._
 
 - - -
-<p><small><em>Copyright © 2014-2015, rain city software | Version 0.90.25</em></small></p>
+<p><small><em>Copyright © 2014-2016, rain city software | Version 0.91.10</em></small></p>

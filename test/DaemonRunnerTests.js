@@ -42,7 +42,7 @@ describe('DaemonRunner', function() {
         });
 
         it('should have all known methods by size and type', function() {
-            dash.methods( runner ).length.should.equal( methods.length );
+            dash.functions( runner ).length.should.equal( methods.length );
 
             methods.forEach(function(method) {
                 runner[ method ].should.be.a('function');
